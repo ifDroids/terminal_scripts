@@ -3,11 +3,11 @@
 for entry in "$(pwd)"/*
 do
     if [ -d "$entry" ]; then #if "$entry is a directory"
-        cd "$entry"
+        cd src/"$entry"
         y="${entry##*/}"
         git remote remove origin >> /dev/null
         git remote add origin git@github.com/ifdroids/"$y".git
-        cd ..
+        cd ../..
     fi
 done
 echo "Remotes added."
