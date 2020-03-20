@@ -5,7 +5,7 @@ do
     if [ -d "$entry" ]; then #if "$entry is a directory"
         cd "$entry"
         y="${entry##*/}"
-        git remote remove origin
+        git remote remove origin >> /dev/null
         git remote add origin git@github.com/ifdroids/"$y".git
         cd ..
     fi
