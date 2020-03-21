@@ -6,7 +6,7 @@ do
         cd "$entry"
         y="${entry##*/}"
         git remote remove origin > /dev/null 2>&1
-        git remote add origin git@github.com/ifdroids/"$y".git
+        git remote add origin git@github.com:ifdroids/"$y".git
         cd ../..
     fi
 done
