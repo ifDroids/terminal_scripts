@@ -7,7 +7,7 @@ do
         y="${entry##*/}"
         git remote remove origin > /dev/null 2>&1
         git remote add origin git@github.com:ifdroids/"$y".git
-        git branch -D master > /dev/null/ 2>&1
+        git branch -D master
         git checkout -b master
         cd ../..
     fi
